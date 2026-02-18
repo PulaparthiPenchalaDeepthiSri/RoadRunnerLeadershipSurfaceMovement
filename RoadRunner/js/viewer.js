@@ -164,7 +164,7 @@ window.editTrip = (id, tripData) => {
 window.endTrip = (id) => {
   if (confirm("End this trip?")) {
     update(ref(db, "trips/" + id), { status: "ended", updatedAt: Date.now() });
-    showNotification("Trip ended - removed from cards, saved in database!");
+    showNotification("Trip ended!");
   }
 };
 
